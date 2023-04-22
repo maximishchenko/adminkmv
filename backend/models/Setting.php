@@ -53,7 +53,7 @@ class Setting extends \yii\base\Model
                 'seo_keywords', 'seo_description', 'seo_title',
             ],
             self::TAB_GLOBAL => [
-                'is_website_offline', 'loading_animation'
+                'is_website_offline', 'loading_animation', 'report_telegram_chat_id'
             ],
         ];
     }

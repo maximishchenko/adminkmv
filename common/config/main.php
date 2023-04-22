@@ -9,6 +9,10 @@ return [
         'configManager',
     ],
     'components' => [
+        'telegram' => [
+            'class' => 'aki\telegram\Telegram',
+            'botToken' => '',
+        ],
         'configManager' => [
             'class' => 'yii2tech\config\Manager',
             'autoRestoreValues' => false,
@@ -135,6 +139,14 @@ return [
                     ],
                     'inputOptions' => [
                         'type' => 'checkbox',
+                    ],
+                ],
+                'reportTelegramChatID' => [
+                    'path' => 'report_telegram_chat_id',
+                    'label' => Yii::t('app', "REPORT_TELEGRAM_CHAT_ID"),
+                    'description' => Yii::t('app', "REPORT_TELEGRAM_CHAT_ID DESCRIPTION"),
+                    'value' => "-821674887",
+                    'rules' => [
                     ],
                 ],
             ],

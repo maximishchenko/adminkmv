@@ -23,7 +23,7 @@ return [
     },
     'components' => [
         'assetManager' => [
-            // 'bundles' => YII_ENV_PROD ? require(__DIR__.'/assets-prod.php') : null,
+            'bundles' => YII_ENV_PROD ? require(__DIR__.'/assets-prod.php') : null,
             'linkAssets' => true,
             'appendTimestamp' => true,
         ],
