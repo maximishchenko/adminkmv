@@ -42,7 +42,7 @@ $this->params['breadcrumbs'] = [['label' => $this->title]];
             <?= \hail812\adminlte\widgets\SmallBox::widget([
                 'title' => 'Скрипты',
                 'text' => 'Подключаемые js-скрипты',
-                'linkUrl' => Url::toRoute("/scripts"),
+                'linkUrl' => Url::toRoute("/script"),
                 'linkText' => 'Перейти',
                 'icon' => 'fas fa-check',
                 'theme' => 'primary'
