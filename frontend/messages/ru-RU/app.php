@@ -22,4 +22,5 @@ return [
     'Do call order' => "Заказать",
     'Client Phone' => "Тел.",
     'Client Name' => 'Имя',
+    'Default Message Title' => "Сообщение формы обратной связи",
 ];

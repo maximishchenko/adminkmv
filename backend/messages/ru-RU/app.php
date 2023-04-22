@@ -82,5 +82,7 @@ return [
     'Delete' => "Удалить",
     'To list' => 'К списку',
     'REPORT_TELEGRAM_CHAT_ID' => 'Telegram Chat ID',
-    'REPORT_TELEGRAM_CHAT_ID DESCRIPTION' => 'ID чата в Telegram для отправки уведомлений'
+    'REPORT_TELEGRAM_CHAT_ID DESCRIPTION' => 'ID чата в Telegram для отправки уведомлений',
+    'REPORT_Email' => 'Адреса для рассылки почтовых уведомлений',
+    "REPORT_Email DESCRIPTION" => "Адреса эл. почты через запятую",
 ];

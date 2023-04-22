@@ -149,6 +149,14 @@ return [
                     'rules' => [
                     ],
                 ],
+                'reportEmail' => [
+                    'path' => 'report_email',
+                    'label' => Yii::t('app', "REPORT_Email"),
+                    'description' => Yii::t('app', "REPORT_Email DESCRIPTION"),
+                    'value' => "info@ya.ru",
+                    'rules' => [
+                    ],
+                ],
             ],
         ],
         'cache' => [

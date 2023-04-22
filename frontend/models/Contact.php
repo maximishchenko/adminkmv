@@ -7,11 +7,21 @@ use Yii;
 
 class Contact extends Callback
 {
-
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
-        $this->sendCallbackTelegram();
+        
+        try {
+            $this->sendCallbackTelegram();
+        } catch (\Exception $e) {
+            Yii::error($e->getMessage());
+        }
+
+        try {
+            $this->sendCallbackEmail();
+        } catch (\Exception $e) {
+            Yii::error($e->getMessage());
+        }
     }
 
     protected function setMessageBodyText(): string
@@ -36,5 +46,16 @@ class Contact extends Callback
             return Yii::t('app', "Telegram Chat ID is not set");
         }
         return true;
+    }
+
+    protected function sendCallbackEmail()
+    {
+        $emails = explode(',', Yii::$app->configManager->getItemValue('reportEmail'));
+        return Yii::$app->mailer->compose()
+            ->setTextBody($this->setMessageBodyText())
+            ->setFrom(Yii::$app->params['senderEmail'])
+            ->setTo($emails)
+            ->setSubject(Yii::t('app', 'Default Message Title'))
+            ->send();
     }
 }
