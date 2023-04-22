@@ -1,0 +1,4 @@
+.map__block {
+    min-height: 600px;
+    background-image: url("../img/sprite.svg#map");
+}

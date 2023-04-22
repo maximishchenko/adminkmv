@@ -1,0 +1,159 @@
+:root {
+    --base-color: rgba(0,0,0,1);
+    --white-color: rgba(255,255,255,1);
+    --base-red-color: rgba(237,28,36,1);
+    --base-red-color-hover: rgb(208, 16, 24);
+    --base-shadow: rgba(230,230,230,1);
+    --base-background-color: rgba(245,245,245,1);
+    --hero-stage-padding: 3rem;
+    --base-description-color: rgba(162,162,162,1);
+    --image-linear-gradient: rgba(0, 0, 0, 0.5);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.rotate {
+    -webkit-animation:spin 2s ease-in both;
+    -moz-animation:spin 2s ease-in both;
+    animation:spin 2s ease-in both;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+    min-height: calc(100vh - 160px);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1660px;
+}
+
+.page {
+    margin: 0;
+}
+
+.parallax {
+    background: linear-gradient(
+        var(--image-linear-gradient), 
+        var(--image-linear-gradient)
+      ), url("../img/parallax.png");
+    min-height: 500px;
+    /* width: 100%; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax.company__description  {
+    min-height: 800px;
+}
+.parallax__contact__button {
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin: 2rem auto
+}
+.company__description__text {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.text__block {  
+    margin: 10% 0;
+    position: absolute;
+}
+
+
+/* Mobile */
+
+
+@media (max-width: 575px) {
+    .container {
+        padding: unset;
+    }
+    .company__description__text {
+        font-size: unset;
+    }
+    .text__block {
+        margin: unset;
+    }
+    .parallax.company__description {
+        min-height: 1000px;
+    }
+}
+@media (max-width: 768px) {
+    .footer__items {
+        flex-direction: column;
+        height: 100%;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+        padding-top: 2rem;
+        margin-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-align-last: center;
+    }
+    .footer__contacts {
+        margin: 2rem 0;
+    }
+}
+
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        padding: unset;
+    }
+    .company__description__text {
+        font-size: unset;
+    }
+    .text__block {
+        margin: unset;
+    }
+    .parallax.company__description {
+        min-height: 1000px;
+    }
+}
+
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+
+/* xl (>=1200) */
+@media (min-width: 1200px) {
+
+}

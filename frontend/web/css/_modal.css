@@ -1,0 +1,296 @@
+:root {
+    --font-family: "Inter", sans-serif;
+    --content-width: 100%;
+    --container-offset: 2.5rem;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --light-color: #fff;
+    --dark-color: #2c2c2c;
+    --brand-color: #ec1616;
+    /* --brand-color: #7000FF; */
+    --border-color: #E6E6E6;
+    --gray-color: #f5f5f5;
+    --size-xs: 0.625rem;
+    --size-s: 1.25rem;
+    --size-n: 1.875rem;
+    --size-m: 2.5rem;
+    --size-l: 3.75rem;
+    --size-xxl: 8.75rem;
+}
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/../fonts/Inter-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Overpass";
+    src: url("../fonts/../fonts/Overpass-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: medium;
+}
+.button-second:disabled, .button-second:disabled:hover {
+    background: var(--gray-color);
+    color: var(--dark-color);
+}
+.input-reset {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+  }
+  .input-reset::-webkit-search-decoration, .input-reset::-webkit-search-cancel-button, .input-reset::-webkit-search-results-button, .input-reset::-webkit-search-results-decoration {
+    display: none;
+  }
+.graph-modal__container {
+    padding: var(--size-m);
+    border-radius: var(--size-n);
+    max-width: 600px;
+  }
+  
+  .feedback-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .feedback-form__title {
+    margin-bottom: var(--size-n);
+    font-size: 1.5rem;
+    font-family: "Overpass";
+    text-align: center;
+    color: var(--dark-color);
+  }
+  .feedback-form__inp, .feedback-form__area {
+    width: 100%;
+    padding: var(--size-n);
+    margin-bottom: var(--size-xs);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: var(--gray-color);
+    border-radius: 20px;
+  }
+  .feedback-form__row {
+    margin-top: var(--size-s);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .feedback-form__politics {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -ms-grid-columns: 30px 1fr;
+    grid-template-columns: 30px 1fr;
+  }
+  .feedback-form__politics label {
+    margin-bottom: var(--size-n);
+    font-size: 1rem !important;
+    color: var(--dark-color);
+  }
+  .feedback-form__checkbox {
+    margin-right: var(--size-xs);
+    height: 20px;
+    width: 40px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .feedback-form__checkbox::before {
+    content: "";
+    position: absolute;
+  }
+  .feedback-form__politic-link {
+    color: var(--dark-color);
+    text-decoration: underline;
+  }
+  .feedback-form .button-second {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .feedback-form input[type=checkbox] {
+    --active: var(--brand-color);
+    --active-inner: #fff;
+    --focus: 0px rgba(0, 0, 0, .3);
+    --border: #d4d4d4;
+    --border-hover: var(--brand-color);
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    -webkit-transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
+    transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
+    -o-transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  }
+  .feedback-form input[type=checkbox]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    -webkit-transition: opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+    transition: opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+    -o-transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+  }
+  .feedback-form input[type=checkbox]:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: .3s;
+    --d-t: .6s;
+    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+  }
+  .feedback-form input[type=checkbox]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+  .feedback-form input[type=checkbox]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+  .feedback-form input[type=checkbox]:disabled + label {
+    cursor: not-allowed;
+  }
+  .feedback-form input[type=checkbox]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+  .feedback-form input[type=checkbox]:focus {
+    -webkit-box-shadow: 0 0 0 var(--focus);
+    box-shadow: 0 0 0 var(--focus);
+  }
+  .feedback-form input[type=checkbox]:not(.switch) {
+    width: 21px;
+  }
+  .feedback-form input[type=checkbox]:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+  .feedback-form input[type=checkbox]:not(.switch):checked {
+    --o: 1;
+  }
+  .feedback-form input[type=checkbox] + label {
+    font-size: 1.4rem;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  .feedback-form input[type=checkbox]:not(.switch) {
+    border-radius: 7px;
+  }
+  .feedback-form input[type=checkbox]:not(.switch):after {
+    width: 5px;
+    height: 9px;
+    border: 2px solid var(--active-inner);
+    border-top: 0;
+    border-left: 0;
+    left: 7px;
+    top: 4px;
+    -webkit-transform: rotate(var(--r, 20deg));
+    -ms-transform: rotate(var(--r, 20deg));
+    transform: rotate(var(--r, 20deg));
+  }
+  .feedback-form input[type=checkbox]:not(.switch):checked {
+    --r: 43deg;
+  }
+  .feedback-form input[type=checkbox].switch {
+    width: 38px;
+    border-radius: 11px;
+  }
+  .feedback-form input[type=checkbox].switch:after {
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--ab, var(--border));
+    -webkit-transform: translateX(var(--x, 0));
+    -ms-transform: translateX(var(--x, 0));
+    transform: translateX(var(--x, 0));
+  }
+  .feedback-form input[type=checkbox].switch:checked {
+    --ab: var(--active-inner);
+    --x: 17px;
+  }
+  .feedback-form input[type=checkbox].switch:disabled:not(:checked):after {
+    opacity: 0.6;
+  }
+  
+  .graph-modal__close {
+    right: 20px;
+    top: 20px;
+  }
+  .graph-modal__close .cross {
+    position: static;
+  }
+  .graph-modal__close .cross::after,
+  .graph-modal__close .cross::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: var(--dark-color);
+    opacity: 0.5;
+  }
+  .graph-modal__close:hover .cross::after,
+  .graph-modal__close:hover .cross::before {
+    background: var(--brand-color);
+    opacity: 1;
+  }
+  
+.feedback-mob-button {
+    bottom: 0;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    z-index: 99;
+    position: fixed;
+    display: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: var(--light-color);
+    color: var(--brand-color);
+    border-top: 1px solid var(--border-color);
+    /*   box-shadow: 0px -7px 20px 0px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .send-ic {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    stroke-width: 1px;
+    stroke: var(--brand-color);
+    fill: none;
+  }

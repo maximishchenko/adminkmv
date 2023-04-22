@@ -1,0 +1,188 @@
+.hero__stage__name {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.hero__stage__first_row, .hero__stage__second_row {
+    display: flex;
+    justify-content: space-around;
+    padding: var(--hero-stage-padding);
+    align-items: center;
+}
+
+.hero__stage__items {
+    display: flex;
+    justify-content: space-around;
+    padding: var(--hero-stage-padding);
+    flex-wrap: wrap;
+}
+
+.hero__stage__second_row {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero__stage__name__title, .hero__stage__title, .hero__stage__item__title {
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 130%;
+}
+.hero__stage__title {
+    font-size: 48px;
+}
+
+.hero__stage__name__description, .hero__stage__item__description {
+    color: var(--base-description-color);
+    font-size: 16px;
+    text-align: left;
+    text-align-last: left;
+    font-weight: 300;
+    text-decoration: none;
+    line-height: 142%;
+    font-style: normal;
+    margin: 1rem 0;
+}
+
+.hero__stage__item {
+    max-width: 40%;
+    min-height: 250px;
+    height: 250px;
+    position: relative;
+    padding: 2rem;
+    border-color: var(--base-shadow);
+    border-style: solid;
+    border-width: 1px;
+    margin: 8rem 0;
+}
+
+.hero__stage__item__button {
+    bottom: 2rem;
+    position: absolute;
+}
+
+.parallax .hero__stage__title {
+    color: var(--white-color);
+}
+
+/* Mobile */
+
+@media (max-width: 575px) {
+    .hero__stage__first_row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero__stage__logo, .hero__stage__name  {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero__stage__name {
+        margin: 2rem 0;
+    }
+    .hero__stage__name__description {
+        text-align: center;
+        text-align-last: center;
+    }
+    .hero__stage__title  {
+        font-size: 32px;
+    }
+    .hero__stage__item {
+        max-width: 100%;
+        padding: unset;
+        border-color: unset;
+        border-style: unset;
+        border-width: unset;
+    }
+    .hero__stage__item__button {
+        bottom: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__stage__first_row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero__stage__logo, .hero__stage__name  {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero__stage__name {
+        margin: 2rem 0;
+    }
+    .hero__stage__name__description {
+        text-align: center;
+        text-align-last: center;
+    }
+    .hero__stage__title  {
+        font-size: 32px;
+    }
+    .hero__stage__item {
+        max-width: 100%;
+        padding: unset;
+        border-color: unset;
+        border-style: unset;
+        border-width: unset;
+    }
+    .hero__stage__item__button {
+        bottom: unset;
+    }
+}
+
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero__stage__first_row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero__stage__logo, .hero__stage__name  {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero__stage__name {
+        margin: 2rem 0;
+    }
+    .hero__stage__name__description {
+        text-align: center;
+        text-align-last: center;
+    }
+    .hero__stage__title  {
+        font-size: 32px;
+    }
+    .hero__stage__item {
+        max-width: 100%;
+        padding: unset;
+        border-color: unset;
+        border-style: unset;
+        border-width: unset;
+    }
+    .hero__stage__item__button {
+        bottom: unset;
+    }
+}
+
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+
+/* xl (>=1200) */
+@media (min-width: 1200px) {
+
+}

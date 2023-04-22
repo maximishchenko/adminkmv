@@ -1,0 +1,52 @@
+.red__btn {
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-color: var(--base-red-color);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-color: var(--white-color);
+    border-style: solid;
+    border-width: 0px;
+    padding-top: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 22px;
+    margin: 0px;
+    color: var(--white-color);
+    font-size: 22px;
+    text-align: center;
+    text-align-last: center;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 100%;
+    font-style: normal;
+}
+
+.red__btn:hover, .red__btn:focus, .red__btn:active, .red__btn:visited {
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-color: var(--base-red-color-hover);
+    border-color: var(--white-color);
+    border-style: solid;
+    border-width: 0px;
+    color: var(--white-color);
+    font-size: 22px;
+    text-align: center;
+    text-align-last: center;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 100%;
+    font-style: normal;
+}
+.hero__stage__item__button {
+    width: calc(100% - 6rem);
+}
+.btn__long {
+    width: 100%;
+    min-width: 100%;
+    display: block;
+}

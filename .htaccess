@@ -1,0 +1,75 @@
+AddDefaultCharset UTF-8
+
+Options +FollowSymLinks
+DirectoryIndex index.php index.html
+RewriteEngine on
+
+RewriteRule /\. - [L,F]
+
+# define the app environment variable
+RewriteCond %{REQUEST_URI} !^/((frontend|backend)/web|admin)
+RewriteRule ^ - [E=APP:frontend]
+RewriteCond %{REQUEST_URI} (?!^/backend/web)^/admin
+RewriteRule ^ - [E=APP:backend]
+
+# rewrite the URI of the frontend app
+RewriteCond %{ENV:APP} =frontend
+RewriteRule ^ frontend/web%{REQUEST_URI}
+# if a directory or a file exists, use the request directly
+RewriteCond %{ENV:APP} =frontend
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# otherwise forward the request to index.php
+RewriteRule ^ frontend/web/index.php [L]
+
+# redirect to the URL without a trailing slash (uncomment if necessary)
+#RewriteRule ^admin/$ /admin [L,R=301]
+
+# rewrite the URI of the backend app
+RewriteCond %{ENV:APP} =backend
+RewriteRule ^admin/?(.*)$ backend/web/$1
+# if a directory or a file exists, use the request directly
+RewriteCond %{ENV:APP} =backend
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# otherwise forward the request to index.php
+RewriteRule ^ backend/web/index.php [L]
+
+# handle a directory trailing slash, redirect to the initial URI instead the rewritten one
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [L,R=301]
+
+# GZIP
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html 
+AddOutputFilterByType DEFLATE text/css 
+AddOutputFilterByType DEFLATE text/javascript 
+AddOutputFilterByType DEFLATE application/javascript 
+AddOutputFilterByType DEFLATE application/xml
+</ifModule>
+
+# HTTP кэширование у клиента
+<ifModule mod_headers.c>
+    #кэшировать css, javascript и текстовые файлы на одну неделю
+    <FilesMatch "\.(js|css|txt|ttf)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+    #кэшировать флэш и изображения на месяц
+    <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png|webp)$">
+        Header set Cache-Control "max-age=2592000"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType text/x-javascript "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresDefault "access plus 2 days"
+</IfModule>

@@ -1,0 +1,7 @@
+a {
+    color: var(--base-color);
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: var(--base-red-color-hover);
+}

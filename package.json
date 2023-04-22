@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-svgmin": "^4.1.0"
+  }
+}

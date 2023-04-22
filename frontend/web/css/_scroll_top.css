@@ -1,0 +1,69 @@
+#scroll_top {
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    right: 60px;
+    bottom: 100px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+    cursor: pointer;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    opacity: .88;
+    position: fixed;
+    width: 60px;
+    z-index: 1000;
+}
+#scroll_top i {
+    color: #8c8c8c;
+    font-size: 24px;
+}
+#scroll_top i:before {
+    speak: none;
+    content: "↑";
+    display: inline-block;
+    font-family: i-icon!important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+}
+
+
+@media (max-width: 575px) {
+    #scroll_top {
+        align-items: center;
+        background: #fff;
+        border-radius: 12px;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+        cursor: pointer;
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        opacity: 1;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+}
+
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+
+/* xl (>=1200) */
+@media (min-width: 1200px) {
+
+}
