@@ -31,6 +31,7 @@ if (Yii::$app->configManager->getItemValue('loadingAnimation') == true) {
         </div>
         <div class="hero__stage__button slideanim">
             <button target="_blank" class="red__btn btn__long" data-callback-modal>
+            <!-- <button target="_blank" class="red__btn btn__long" data-callback-thanks> -->
                 <?= Yii::t('app', 'Get service'); ?>
             </button>
         </div>

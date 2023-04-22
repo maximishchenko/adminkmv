@@ -33,18 +33,23 @@ function stickyNavbar() {
 
 
 let feedbackModal = new GraphModal();
+let thanksModalItem = new GraphModal();
 document.addEventListener("DOMContentLoaded", function () {
 
     // Feedback modal event
     document.querySelectorAll('button[data-callback-modal]').forEach(el => el.addEventListener('click', function (e) {
-      // if (policyModal.isOpen == true) {
-      //   policyModal.close();
-      // }
-      // if (thanksModalItem.isOpen == true) {
-      //   thanksModalItem.close();
-      // }
+      if (thanksModalItem.isOpen == true) {
+        thanksModalItem.close();
+      }
       feedbackModal.open('feedback');
       document.getElementById("callback_submit_btn_modal").disabled = true;
+    }));
+    ///
+    document.querySelectorAll('button[data-callback-thanks]').forEach(el => el.addEventListener('click', function (e) {
+      if (thanksModalItem.isOpen == true) {
+        thanksModalItem.close();
+      }
+      thanksModalItem.open('successfully');
     }));
 
     // Begin Ajax Form Submit
@@ -68,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
         
         this.reset();
         
-        //let isModalForm = this.getAttribute('data-modal-form');
-        //if (isModalForm != null) {
-        //  feedbackModal.close();
-        //}
-        //thanksModalItem.open("successfully");
+        let isModalForm = this.getAttribute('data-modal-form');
+        if (isModalForm != null) {
+         feedbackModal.close();
+        }
+        thanksModalItem.open("successfully");
 
 
         request.addEventListener('load', () => {

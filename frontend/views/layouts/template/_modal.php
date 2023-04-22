@@ -2,6 +2,7 @@
 
 use frontend\models\Contact;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
 $contact = new Contact();
@@ -59,7 +60,7 @@ $contact = new Contact();
                     'data-agreement-checkbox' => '',
               ], false); ?>
           <label for="feedback__checkbox" required>
-            Нажимая, вы соглашаетесь на обработку <a class="feedback-form__politic-link politics" href="javascript:void(0);">Персональных
+            Нажимая, вы соглашаетесь на обработку <a class="feedback-form__politic-link politics" href="<?= Url::toRoute('/policy'); ?>" target="_blank">Персональных
               данных</a>
           </label>
         </div>
@@ -73,7 +74,7 @@ $contact = new Contact();
 
   </div>
 
-  <?php // $this->render('//layouts/_thanks'); ?>
+  <?= $this->render('//layouts/template/_thanks'); ?>
 
   <?php // $this->render('//layouts/_policy'); ?>
 
