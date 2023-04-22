@@ -19,6 +19,7 @@ $contact = new Contact();
         'id' => 'feedback_form_modal',
         'action' => ['/contact'],
         'method' => 'post',
+        'enableClientScript' => false,
         'options' => [
           'class' => "feedback-form",
           'autocomplete' => 'off',
@@ -75,7 +76,5 @@ $contact = new Contact();
   </div>
 
   <?= $this->render('//layouts/template/_thanks'); ?>
-
-  <?php // $this->render('//layouts/_policy'); ?>
 
 </div>

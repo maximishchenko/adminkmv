@@ -2,8 +2,6 @@
 
 /** @var yii\web\View $this */
 
-use frontend\models\Contact;
-
 $this->title = Yii::$app->configManager->getItemValue('seoDefaultTitle');
 
 if (Yii::$app->configManager->getItemValue('loadingAnimation') == true) {

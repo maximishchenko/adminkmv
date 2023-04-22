@@ -185,17 +185,3 @@ document.addEventListener("DOMContentLoaded", function () {
       phoneInput.addEventListener('paste', onPhonePaste, false);
     }
 })
-
-
-
-// // Forms
-// document.querySelectorAll(".callback_btn")
-//   .forEach(el => el.addEventListener("click",  function(e) {
-//         let callback_modal = document.querySelector(".modal");
-//         callback_modal.classList.toggle("active");
-// }));
-// document.querySelectorAll(".close")
-//   .forEach(el => el.addEventListener("click",  function(e) {
-//         let callback_modal = document.querySelector(".modal");
-//         callback_modal.classList.toggle("active");
-// }));
